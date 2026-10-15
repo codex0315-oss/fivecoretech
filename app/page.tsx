@@ -1,3 +1,4 @@
+import Advisor from "@/components/Advisor";
 import Contact from "@/components/Contact";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
         <Services />
         <Projects />
         <Team />
+        <Advisor />
         <CtaBand />
         <Contact />
       </main>
