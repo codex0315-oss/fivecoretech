@@ -8,7 +8,7 @@ const advisor = {
   name: "Mr. Guil Cinco",
   role: "Marketing Advisor",
   bio: "Mr. Guil Cinco guides FiveCore Technologies on marketing and brand strategy, helping us reach and better serve the businesses we build for.",
-  photo: undefined as string | undefined,
+  photo: "/cinco.png" as string | undefined,
   initials: "GC",
 };
 
