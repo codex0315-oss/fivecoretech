@@ -2,14 +2,14 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import { SectionLabel } from "./SectionHeading";
 
-// TODO: edit the bio. Put his photo in public/guil-cinco.png,
-// or delete the `photo` line to show his initials instead.
+// Edit the bio any time. To show initials instead of a photo,
+// change the photo line to: photo: undefined as string | undefined,
 const advisor = {
-  name: "Mr. Guil Cinco",
-  role: "Marketing Advisor",
-  bio: "Mr. Guil Cinco guides FiveCore Technologies on marketing and brand strategy, helping us reach and better serve the businesses we build for.",
-  photo: "/cinco.png" as string | undefined,
-  initials: "GC",
+  name: "John Rey Cilin",
+  role: "Advisor · Tech Lead · Senior Software Engineer",
+  bio: "John Rey Cilin is FiveCore Technologies' advisor, Tech Lead, and Senior Software Engineer, guiding the team's technical direction on every project we build.",
+  photo: "/cilin.png" as string | undefined,
+  initials: "JC",
 };
 
 export default function Advisor() {

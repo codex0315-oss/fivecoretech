@@ -2,13 +2,13 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-// TODO: replace with each member's full name and real role
 const team = [
   { name: "Ericson Bareno", role: "Junior Software Developer", photo: "/bareno.png" },
   { name: "Rozel Batomalaque", role: "UI UX Designer", photo: "/batomalaque.png" },
   { name: "Napoleon Batoon", role: "QA Tester", photo: "/batoon.png" },
-  { name: "John Rey Cilin", role: "Senior Software Engineer", photo: "/cilin.png" },
+  { name: "John Rey Cilin", role: "Tech Lead & Senior Software Engineer", photo: "/cilin.png" },
   { name: "Jenelyn Diaz", role: "QA Tester", photo: "/diaz.png" },
+  { name: "Guil Cinco", role: "Marketing Head", photo: "/cinco.png" },
 ];
 
 export default function Team() {
@@ -25,13 +25,13 @@ export default function Team() {
           </p>
         </Reveal>
 
-        {/* Centered rows: 2 per row on phones, 3 on tablets, all 5 on desktop */}
-        <div className="mt-14 flex flex-wrap justify-center gap-5">
+        {/* 2 per row on phones, 3 per row from tablet up */}
+        <div className="mx-auto mt-14 flex max-w-4xl flex-wrap justify-center gap-5">
           {team.map(({ name, role, photo }, i) => (
             <Reveal
               key={name}
-              delay={(i % 2) * 80}
-              className="w-[calc(50%_-_0.625rem)] sm:w-[calc(33.333%_-_0.84rem)] lg:w-[calc(20%_-_1rem)]"
+              delay={(i % 3) * 80}
+              className="w-[calc(50%_-_0.625rem)] sm:w-[calc(33.333%_-_0.84rem)]"
             >
               <article className="group h-full rounded-2xl border border-line bg-surface p-3 text-center transition hover:-translate-y-1 hover:border-gold">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-background">
@@ -39,7 +39,7 @@ export default function Team() {
                     src={photo}
                     alt={name}
                     fill
-                    sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
+                    sizes="(min-width: 640px) 300px, 50vw"
                     className="object-cover object-top transition duration-500 group-hover:scale-105"
                   />
                 </div>
